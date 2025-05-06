@@ -1,7 +1,11 @@
 -- TODO: Implementar más plugins útiles
 
 return {
-        { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+        -- Colorscheme
+        { 
+                "catppuccin/nvim", name = "catppuccin", priority = 1000 
+        },
+        -- Autopairs to brackets
         {
                 'windwp/nvim-autopairs',
                 event = "InsertEnter",
@@ -9,6 +13,7 @@ return {
                 -- use opts = {} for passing setup options
                 -- this is equivalent to setup({}) function
         },
+        -- Highlights to Comments and filter/search
         {
                 "folke/todo-comments.nvim",
                 dependencies = { "nvim-lua/plenary.nvim" },
@@ -18,8 +23,14 @@ return {
                 -- refer to the configuration section below
                         }
         },
+        -- Upgrade to down bar
         {
                 'nvim-lualine/lualine.nvim',
                 dependencies = { 'nvim-tree/nvim-web-devicons' }
+        },
+        -- File Explorer
+        {
+                'nvim-tree/nvim-tree.lua'
         }
+
 }
