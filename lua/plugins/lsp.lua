@@ -63,6 +63,9 @@ return {
             require("lspconfig").pyright.setup({
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
+            }),
+            require("lspconfig").ts_ls.setup({
+
             })
         )
     end
