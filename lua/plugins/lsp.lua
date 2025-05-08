@@ -58,7 +58,9 @@ return {
                     workspace = { checkThirdParty = false }
                 }
             }
-        }
+        },
+
+        require("lspconfig").pyright.setup({})
         )
     end
 }
