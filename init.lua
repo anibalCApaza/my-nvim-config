@@ -58,7 +58,6 @@ require("config.lazy")
 require("catppuccin").setup({
     transparent_background = true
 })
-vim.cmd.colorscheme "catppuccin-macchiato"
 
 require('lualine').setup({})
 
@@ -79,5 +78,5 @@ require("nvim-tree").setup({
     on_attach = my_on_attach,
 })
 
-
--- LSP
+-- COLORSCHEME
+vim.cmd.colorscheme "catppuccin-macchiato"
