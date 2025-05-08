@@ -56,7 +56,7 @@ require("config.lazy")
 
 vim.cmd.colorscheme "catppuccin-macchiato"
 
-require('lualine').setup()
+require('lualine').setup({})
 
 require("nvim-tree").setup({
   sort = {
@@ -74,3 +74,6 @@ require("nvim-tree").setup({
   },
   on_attach = my_on_attach,
 })
+
+
+-- LSP
