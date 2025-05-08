@@ -54,6 +54,10 @@ vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer
 -- PLUGINS
 require("config.lazy")
 
+
+require("catppuccin").setup({
+    transparent_background = true
+})
 vim.cmd.colorscheme "catppuccin-macchiato"
 
 require('lualine').setup({})
