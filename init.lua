@@ -54,6 +54,14 @@ vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer
 -- PLUGINS
 require("config.lazy")
 
+require("mason-lspconfig").setup({
+    automatic_enable = false,
+    ensure_installed = {
+        'lua_ls',
+        'pyright',
+        'ts_ls'
+    }
+})
 
 require("catppuccin").setup({
     transparent_background = true
@@ -80,3 +88,11 @@ require("nvim-tree").setup({
 
 -- COLORSCHEME
 vim.cmd.colorscheme "catppuccin-macchiato"
+
+vim.diagnostic.config({
+    virtual_text = true,    -- Muestra el diagnóstico como texto virtual en la línea
+    signs = true,           -- Muestra los signos en el signo gutter
+    underline = true,       -- Subraya el texto con errores/advertencias
+    update_in_insert = false, -- No actualizar los diagnósticos mientras se escribe (puede ser intensivo)
+    severity_sort = true,   -- Ordena los diagnósticos por severidad
+})
