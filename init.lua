@@ -88,12 +88,11 @@ require("nvim-tree").setup({
 
 -- COLORSCHEME BY OS
 
-if vim.fn.has('win64') then
-    vim.cmd.colorscheme "kanagawa"
-elseif vim.fn.has('unix') then
-    vim.cmd.colorscheme("catppuccin")
+if vim.fn.has('unix') == 1 then
+    vim.cmd.colorscheme "catppuccin"
+elseif vim.fn.has('win64') == 1 then
+    vim.cmd.colorscheme("kanagawa")
 else
-    -- Opción predeterminada si no se detecta Linux o Windows
     vim.cmd.colorscheme("default")
 end
 
