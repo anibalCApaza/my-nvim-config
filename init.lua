@@ -86,13 +86,23 @@ require("nvim-tree").setup({
     on_attach = my_on_attach,
 })
 
--- COLORSCHEME
-vim.cmd.colorscheme "catppuccin-macchiato"
+-- COLORSCHEME BY OS
+
+if vim.fn.has('win64') then
+    vim.cmd.colorscheme "kanagawa"
+elseif vim.fn.has('unix') then
+    vim.cmd.colorscheme("catppuccin")
+else
+    -- Opción predeterminada si no se detecta Linux o Windows
+    vim.cmd.colorscheme("default")
+end
+
+
 
 vim.diagnostic.config({
-    virtual_text = true,    -- Muestra el diagnóstico como texto virtual en la línea
-    signs = true,           -- Muestra los signos en el signo gutter
-    underline = true,       -- Subraya el texto con errores/advertencias
+    virtual_text = true,      -- Muestra el diagnóstico como texto virtual en la línea
+    signs = true,             -- Muestra los signos en el signo gutter
+    underline = true,         -- Subraya el texto con errores/advertencias
     update_in_insert = false, -- No actualizar los diagnósticos mientras se escribe (puede ser intensivo)
-    severity_sort = true,   -- Ordena los diagnósticos por severidad
+    severity_sort = true,     -- Ordena los diagnósticos por severidad
 })

@@ -1,10 +1,15 @@
 -- TODO: Implementar más plugins útiles
 
 return {
-    -- Colorscheme
+    -- Colorscheme Linux Terminal
     {
         "catppuccin/nvim", name = "catppuccin", priority = 1000
     },
+    -- Colorscheme Windows Terminal
+    {
+        "rebelot/kanagawa.nvim"
+    },
+
     -- Autopairs to brackets
     {
         'windwp/nvim-autopairs',
