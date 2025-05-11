@@ -60,6 +60,7 @@ vim.diagnostic.config({
     severity_sort = true,     -- Ordena los diagnósticos por severidad
 })
 -- PLUGINS
+-- Configuraciones
 require("config.lazy")
 
 require("mason-lspconfig").setup({
