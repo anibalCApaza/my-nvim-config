@@ -51,6 +51,14 @@ vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explor
 vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>", { desc = "Refresh File Explorer" }) -- Recarga nvim-tree con Ctrl+r
 vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer" })     -- Enfoca nvim-tree con Ctrl+f
 
+-- Configuración de mensajes del LSP
+vim.diagnostic.config({
+    virtual_text = true,      -- Muestra el diagnóstico como texto virtual en la línea
+    signs = true,             -- Muestra los signos en el signo gutter
+    underline = true,         -- Subraya el texto con errores/advertencias
+    update_in_insert = false, -- No actualizar los diagnósticos mientras se escribe (puede ser intensivo)
+    severity_sort = true,     -- Ordena los diagnósticos por severidad
+})
 -- PLUGINS
 require("config.lazy")
 
@@ -94,25 +102,25 @@ elseif vim.fn.has('win64') == 1 then
     vim.cmd.colorscheme("kanagawa")
     -- Default options:
     require('kanagawa').setup({
-        compile = false, -- enable compiling the colorscheme
+        compile = false,  -- enable compiling the colorscheme
         undercurl = true, -- enable undercurls
         commentStyle = { italic = false },
         functionStyle = {},
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
         typeStyle = {},
-        transparent = false, -- do not set background color
-        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+        transparent = false,   -- do not set background color
+        dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
-        colors = {         -- add/modify theme and palette colors
+        colors = {             -- add/modify theme and palette colors
             palette = {},
             theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
         },
         overrides = function(colors) -- add/modify highlights
             return {}
         end,
-        theme = "wave", -- Load "wave" theme
-        background = { -- map the value of 'background' option to a theme
+        theme = "wave",    -- Load "wave" theme
+        background = {     -- map the value of 'background' option to a theme
             dark = "wave", -- try "dragon" !
             light = "lotus"
         },
@@ -123,13 +131,3 @@ elseif vim.fn.has('win64') == 1 then
 else
     vim.cmd.colorscheme("default")
 end
-
-
-
-vim.diagnostic.config({
-    virtual_text = true,      -- Muestra el diagnóstico como texto virtual en la línea
-    signs = true,             -- Muestra los signos en el signo gutter
-    underline = true,         -- Subraya el texto con errores/advertencias
-    update_in_insert = false, -- No actualizar los diagnósticos mientras se escribe (puede ser intensivo)
-    severity_sort = true,     -- Ordena los diagnósticos por severidad
-})
