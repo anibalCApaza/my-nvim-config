@@ -86,7 +86,7 @@ require("nvim-tree").setup({
     on_attach = my_on_attach,
 })
 
--- COLORSCHEME BY OS
+-- COLORSCHEME según mis sistemas operativos
 
 if vim.fn.has('unix') == 1 then
     vim.cmd.colorscheme "catppuccin"
