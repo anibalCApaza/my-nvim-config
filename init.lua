@@ -98,9 +98,13 @@ require("nvim-tree").setup({
 -- COLORSCHEME según mis sistemas operativos
 
 if vim.fn.has('unix') == 1 then
+    require("catppuccin").setup({
+        integrations = {
+
+        }
+    })
     vim.cmd.colorscheme "catppuccin"
 elseif vim.fn.has('win64') == 1 then
-    vim.cmd.colorscheme("kanagawa")
     -- Default options:
     require('kanagawa').setup({
         compile = false,  -- enable compiling the colorscheme
@@ -126,9 +130,7 @@ elseif vim.fn.has('win64') == 1 then
             light = "lotus"
         },
     })
-
-    -- setup must be called before loading
-    vim.cmd("colorscheme kanagawa")
+    vim.cmd.colorscheme("kanagawa")
 else
     vim.cmd.colorscheme("default")
 end
