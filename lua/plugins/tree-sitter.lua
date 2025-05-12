@@ -8,7 +8,8 @@ return {
             "lua",
             "luadoc",
             "python",
-            "javascript"
+            "javascript",
+            "query"
         },
         highlight = {
             enable = true

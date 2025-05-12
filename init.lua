@@ -68,7 +68,8 @@ require("mason-lspconfig").setup({
     ensure_installed = {
         'lua_ls',
         'pyright',
-        'ts_ls'
+        'ts_ls',
+        'intelephense'
     }
 })
 
