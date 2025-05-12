@@ -9,7 +9,8 @@ return {
             "luadoc",
             "python",
             "javascript",
-            "query"
+            "query",
+            "php"
         },
         highlight = {
             enable = true
