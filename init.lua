@@ -72,10 +72,6 @@ require("mason-lspconfig").setup({
     }
 })
 
-require("catppuccin").setup({
-    transparent_background = true
-})
-
 require('lualine').setup({})
 
 require("nvim-tree").setup({
@@ -100,8 +96,8 @@ require("nvim-tree").setup({
 if vim.fn.has('unix') == 1 then
     require("catppuccin").setup({
         integrations = {
-
-        }
+        },
+        transparent_background = true,
     })
     vim.cmd.colorscheme "catppuccin"
 elseif vim.fn.has('win64') == 1 then
