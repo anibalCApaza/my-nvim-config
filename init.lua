@@ -97,6 +97,11 @@ require("nvim-tree").setup({
 if vim.fn.has('unix') == 1 then
     require("catppuccin").setup({
         integrations = {
+            indent_blankline = {
+                enabled = true,
+                scope_color = "yellow", -- catppuccin color (eg. `lavender`) Default: text
+                colored_indent_levels = true,
+            },
         },
         transparent_background = true,
         no_italic = false,
@@ -116,7 +121,7 @@ elseif vim.fn.has('win64') == 1 then
         keywordStyle = { italic = false },
         statementStyle = { bold = false },
         typeStyle = {},
-        transparent = true,   -- do not set background color
+        transparent = true,    -- do not set background color
         dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
         colors = {             -- add/modify theme and palette colors
@@ -136,4 +141,3 @@ elseif vim.fn.has('win64') == 1 then
 else
     vim.cmd.colorscheme("default")
 end
-
