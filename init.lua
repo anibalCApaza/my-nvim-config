@@ -121,14 +121,14 @@ if vim.fn.has('unix') == 1 then
             macchiato = function(macchiato)
                 return {
                     LineNrAbove = {
-                        fg = macchiato.yellow
+                        fg = macchiato.sky
                     },
                     LineNr = {
                         fg = macchiato.red
                     },
                     LineNrBelow = {
-                        fg = macchiato.yellow
-                    }
+                        fg = macchiato.sky
+                    },
                 }
             end
         }
