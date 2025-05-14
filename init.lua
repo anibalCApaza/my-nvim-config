@@ -56,7 +56,8 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Anterio
 vim.keymap.set("n", "<C-q>", function()
   require("mini.bufremove").delete(0, false)
 end, { desc = "Cerrar buffer actual con Ctrl+q" })
-
+-- Guardado
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
 
 
 -- Configuración de mensajes del LSP
