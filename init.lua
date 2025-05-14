@@ -108,9 +108,24 @@ if vim.fn.has('unix') == 1 then
         styles = {
             comments = {},
             conditionals = {},
+        },
+        highlight_overrides = {
+            macchiato = function(macchiato)
+                return {
+                    LineNrAbove = {
+                        fg = macchiato.mauve
+                    },
+                    LineNr = {
+                        fg = macchiato.red
+                    },
+                    LineNrBelow = {
+                        fg = macchiato.mauve
+                    }
+                }
+            end
         }
     })
-    vim.cmd.colorscheme "catppuccin"
+    vim.cmd.colorscheme("catppuccin-macchiato")
 elseif vim.fn.has('win64') == 1 then
     -- Default options:
     require('kanagawa').setup({

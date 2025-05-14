@@ -1,8 +1,13 @@
 local M = {}
+local ibl = require("ibl")
+
 
 function M.setup()
-    require("ibl").setup({})
+    ibl.setup({
+        indent = {
+            char = "▎"
+        }
+    })
 end
 
 return M
-
