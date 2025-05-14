@@ -10,7 +10,8 @@ function M.setup()
             right_mouse_command = function(bufnr)
                 require("mini.bufremove").delete(bufnr, false)
             end,
-        }
+            separator_style = "slant"
+        },
     })
 end
 
