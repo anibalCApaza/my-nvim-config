@@ -113,13 +113,13 @@ if vim.fn.has('unix') == 1 then
             macchiato = function(macchiato)
                 return {
                     LineNrAbove = {
-                        fg = macchiato.mauve
+                        fg = macchiato.yellow
                     },
                     LineNr = {
                         fg = macchiato.red
                     },
                     LineNrBelow = {
-                        fg = macchiato.mauve
+                        fg = macchiato.yellow
                     }
                 }
             end
@@ -156,3 +156,6 @@ elseif vim.fn.has('win64') == 1 then
 else
     vim.cmd.colorscheme("default")
 end
+
+
+
