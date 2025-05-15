@@ -13,7 +13,9 @@ return function()
     -- Guardado
     vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
 
+    
 
+    -- BARBAR-NVIM
     -- Move to previous/next
     vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
     vim.keymap.set('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
@@ -44,6 +46,8 @@ return function()
     -- Close buffer
     vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
+    -- Restore buffer
+    vim.keymap.set('n', '<A-z>', '<Cmd>BufferRestore<CR>', opts)
     -- Wipeout buffer
     --                 :BufferWipeout
 
@@ -68,4 +72,7 @@ return function()
     -- Other:
     -- :BarbarEnable - enables barbar (enabled by default)
     -- :BarbarDisable - very bad command, should never be used
+
+    -- FIN BARBAR-NIVM
+
 end
