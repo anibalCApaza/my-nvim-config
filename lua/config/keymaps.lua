@@ -19,8 +19,8 @@ return function()
     vim.keymap.set('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 
     -- Re-order to previous/next
-    vim.keymap.set('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-    vim.keymap.set('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+    vim.keymap.set('n', '<A-h>', '<Cmd>BufferMovePrevious<CR>', opts)
+    vim.keymap.set('n', '<A-l>', '<Cmd>BufferMoveNext<CR>', opts)
 
     -- Goto buffer in position...
     vim.keymap.set('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
