@@ -10,7 +10,8 @@ return {
             "python",
             "javascript",
             "query",
-            "php"
+            "php",
+            "html"
         },
         highlight = {
             enable = true

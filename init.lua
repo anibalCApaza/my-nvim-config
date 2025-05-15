@@ -13,6 +13,11 @@ vim.opt.softtabstop = 4
 
 vim.opt.wrap = false
 
+-- clipboard
+vim.opt.clipboard = "unnamedplus"
+-- Limitar el número de resultados visibles del autocompletado
+vim.o.pumheight = 10
+
 -- Evita que Neovim cambie el fondo de la terminal
 vim.cmd [[
   highlight Normal guibg=NONE ctermbg=NONE
@@ -66,7 +71,8 @@ require("mason-lspconfig").setup({
         'lua_ls',
         'pyright',
         'ts_ls',
-        'intelephense'
+        'intelephense',
+        'html'
     }
 })
 

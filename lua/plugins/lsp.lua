@@ -1,3 +1,6 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -61,14 +64,15 @@ return {
             },
 
             require("lspconfig").pyright.setup({
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
             }),
             require("lspconfig").ts_ls.setup({
 
             }),
             require("lspconfig").intelephense.setup({
 
+            }),
+            require("lspconfig").html.setup({
+                capabilities = capabilities
             })
         )
     end
