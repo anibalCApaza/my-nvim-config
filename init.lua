@@ -54,7 +54,7 @@ vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Siguiente buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Anterior buffer" })
 vim.keymap.set("n", "<C-q>", function()
-  require("mini.bufremove").delete(0, false)
+    require("mini.bufremove").delete(0, false)
 end, { desc = "Cerrar buffer actual con Ctrl+q" })
 -- Guardado
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
@@ -111,6 +111,7 @@ if vim.fn.has('unix') == 1 then
                 scope_color = "yellow", -- catppuccin color (eg. `lavender`) Default: text
                 colored_indent_levels = true,
             },
+            barbar = true,
         },
         transparent_background = true,
         no_italic = false,
@@ -132,7 +133,7 @@ if vim.fn.has('unix') == 1 then
                     },
                 }
             end
-        }
+        },
     })
     vim.cmd.colorscheme("catppuccin-macchiato")
 elseif vim.fn.has('win64') == 1 then
