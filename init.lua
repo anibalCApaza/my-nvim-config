@@ -46,19 +46,7 @@ end
 
 
 -- MAPEO DE TECLAS
--- Nvim-tree
-vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })   -- Abre/cierra nvim-tree con Ctrl+e
-vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>", { desc = "Refresh File Explorer" }) -- Recarga nvim-tree con Ctrl+r
-vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer" })     -- Enfoca nvim-tree con Ctrl+f
--- Bufferline
-vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Siguiente buffer" })
-vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Anterior buffer" })
-vim.keymap.set("n", "<C-q>", function()
-    require("mini.bufremove").delete(0, false)
-end, { desc = "Cerrar buffer actual con Ctrl+q" })
--- Guardado
-vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
-
+require("config.keymaps")()
 
 -- Configuración de mensajes del LSP
 vim.diagnostic.config({
