@@ -56,7 +56,7 @@ return function()
 
     -- Magic buffer-picking mode
     vim.keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
-    vim.keymap.set('n', '<C-s-p>', '<Cmd>BufferPickDelete<CR>', opts)
+    vim.keymap.set('n', '<C-o>', '<Cmd>BufferPickDelete<CR>', opts)
 
     -- Sort automatically by...
     vim.keymap.set('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
