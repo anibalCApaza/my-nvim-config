@@ -73,7 +73,8 @@ require("mason-lspconfig").setup({
         'ts_ls',
         'intelephense',
         'html',
-        'cssls'
+        'cssls',
+        'astro'
     }
 })
 

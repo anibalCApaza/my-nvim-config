@@ -12,7 +12,8 @@ return {
             "query",
             "php",
             "html",
-            "css"
+            "css",
+            "astro"
         },
         highlight = {
             enable = true

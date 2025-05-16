@@ -76,6 +76,8 @@ return {
             }),
             require("lspconfig").cssls.setup({
                 capatilities = capabilities
+            }),
+            require("lspconfig").astro.setup({
             })
         )
     end
