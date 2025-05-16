@@ -73,6 +73,9 @@ return {
             }),
             require("lspconfig").html.setup({
                 capabilities = capabilities
+            }),
+            require("lspconfig").cssls.setup({
+                capatilities = capabilities
             })
         )
     end

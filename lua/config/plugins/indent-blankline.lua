@@ -5,7 +5,7 @@ local ibl = require("ibl")
 function M.setup()
     ibl.setup({
         indent = {
-            char = "▎"
+            char = "▏"
 
         },
         scope = {

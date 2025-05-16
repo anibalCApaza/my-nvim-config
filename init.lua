@@ -72,7 +72,8 @@ require("mason-lspconfig").setup({
         'pyright',
         'ts_ls',
         'intelephense',
-        'html'
+        'html',
+        'cssls'
     }
 })
 

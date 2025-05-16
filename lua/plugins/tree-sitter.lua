@@ -11,7 +11,8 @@ return {
             "javascript",
             "query",
             "php",
-            "html"
+            "html",
+            "css"
         },
         highlight = {
             enable = true
