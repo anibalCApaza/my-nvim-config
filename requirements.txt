@@ -1,0 +1,5 @@
+WINDOWS
+- Compiler "gcc"
+
+All
+- ripgrep
