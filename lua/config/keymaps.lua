@@ -77,8 +77,20 @@ return function()
     --
     -- -- TELESCOPE
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-    vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+    vim.keymap.set('n', '<leader>ff', builtin.find_files,
+        { desc = 'Telescope find files', noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep,
+        { desc = 'Telescope live grep', noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>fb', builtin.buffers,
+        { desc = 'Telescope buffers', noremap = true, silent = true })
+
+    vim.keymap.set('n', '<leader>fh', builtin.help_tags,
+        {
+            desc = 'Telescope help tags', noremap = true, silent = true })
+
+    -- keymaps git for telescope
+    vim.keymap.set('n', '<leader>gf', builtin.git_files, { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>gs', builtin.git_status, { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>gb', builtin.git_branches, { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, { noremap = true, silent = true })
 end
