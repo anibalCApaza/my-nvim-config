@@ -19,7 +19,7 @@ function M.setup()
         mapping = cmp.mapping.preset.insert({
             ['<C-d>'] = cmp.mapping.scroll_docs(-4),
             ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-space>'] = cmp.mapping.complete(),
+            ['<C-r>'] = cmp.mapping.complete(),
             ['<C-e>'] = cmp.mapping.abort(),
             ['<C-y>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
             -- ['<Tab>'] = cmp.mapping(function(fallback)
