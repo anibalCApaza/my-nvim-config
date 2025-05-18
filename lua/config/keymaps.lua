@@ -1,9 +1,9 @@
 return function()
     local opts = { noremap = true, silent = true }
     -- Nvim-tree
-    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })   -- Abre/cierra nvim-tree con Ctrl+e
-    vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>", { desc = "Refresh File Explorer" }) -- Recarga nvim-tree con Ctrl+r
-    vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer" })     -- Enfoca nvim-tree con Ctrl+f
+    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true })   -- Abre/cierra nvim-tree con Ctrl+e
+    vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>", { desc = "Refresh File Explorer", noremap = true, silent = true }) -- Recarga nvim-tree con Ctrl+r
+    vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })     -- Enfoca nvim-tree con Ctrl+f
     -- Guardado
     vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
     -- Cerrar archivo(no confundir con buffer)
