@@ -50,9 +50,6 @@ local function my_on_attach(bufnr)
 end
 
 
--- MAPEO DE TECLAS
-require("config.keymaps")()
-
 -- Configuración de mensajes del LSP
 vim.diagnostic.config({
     virtual_text = true,      -- Muestra el diagnóstico como texto virtual en la línea
@@ -174,3 +171,6 @@ elseif vim.fn.has('win64') == 1 then
 else
     vim.cmd.colorscheme("default")
 end
+
+-- MAPEO DE TECLAS
+require("config.keymaps")()
