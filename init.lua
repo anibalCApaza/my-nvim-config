@@ -108,6 +108,8 @@ if vim.fn.has('unix') == 1 then
                 colored_indent_levels = true,
             },
             barbar = true,
+            noice = true,
+            notify = true,
         },
         transparent_background = true,
         no_italic = false,
