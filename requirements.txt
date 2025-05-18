@@ -1,5 +1,9 @@
 WINDOWS
 - Compiler "gcc"
 
-All
+AMBOS
 - ripgrep
+- fd
+
+* Recomiendo usar chocolatey para tener ripgrep y fd, para gcc se puede encontrar una version comprimida en internet, solo agregar el bin al path y ya se encuentra funcionando.
+
