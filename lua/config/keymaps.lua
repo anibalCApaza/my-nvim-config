@@ -1,9 +1,10 @@
 return function()
     local opts = { noremap = true, silent = true }
     -- Nvim-tree
-    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true })   -- Abre/cierra nvim-tree con Ctrl+e
-    vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>", { desc = "Refresh File Explorer", noremap = true, silent = true }) -- Recarga nvim-tree con Ctrl+r
-    vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })     -- Enfoca nvim-tree con Ctrl+f
+    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true }) -- Abre/cierra nvim-tree con Ctrl+e
+    vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>",
+        { desc = "Refresh File Explorer", noremap = true, silent = true })                                                -- Recarga nvim-tree con Ctrl+r
+    vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })   -- Enfoca nvim-tree con Ctrl+f
     -- Guardado
     vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
     -- Cerrar archivo(no confundir con buffer)
@@ -73,4 +74,11 @@ return function()
     -- :BarbarDisable - very bad command, should never be used
 
     -- FIN BARBAR-NIVM
+    --
+    -- -- TELESCOPE
+    local builtin = require('telescope.builtin')
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+    vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 end
