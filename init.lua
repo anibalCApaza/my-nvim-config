@@ -104,6 +104,7 @@ if vim.fn.has('unix') == 1 then
                 scope_color = "yellow", -- catppuccin color (eg. `lavender`) Default: text
                 colored_indent_levels = true,
             },
+            alpha = true,
             barbar = true,
             noice = true,
             notify = true,
