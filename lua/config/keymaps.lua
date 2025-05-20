@@ -1,18 +1,14 @@
 return function()
     local opts = { noremap = true, silent = true }
     -- Nvim-tree
-    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true }) -- Abre/cierra nvim-tree con Ctrl+e
-    vim.keymap.set("n", "<C-r>", ":NvimTreeRefresh<CR>",
+    vim.keymap.set("n", "<A-b>", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true }) -- Abre/cierra nvim-tree con Ctrl+e
+    vim.keymap.set("n", "<A-r>", ":NvimTreeRefresh<CR>",
         { desc = "Refresh File Explorer", noremap = true, silent = true })                                                -- Recarga nvim-tree con Ctrl+r
-    vim.keymap.set("n", "<C-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })   -- Enfoca nvim-tree con Ctrl+f
+    vim.keymap.set("n", "<A-f>", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })   -- Enfoca nvim-tree con Ctrl+f
     -- Guardado
     vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
     -- Cerrar archivo(no confundir con buffer)
     vim.api.nvim_set_keymap('n', '<C-q>', ':q<CR>', { noremap = true, silent = true })
-
-
-
-
 
 
     -- BARBAR-NVIM
@@ -59,8 +55,8 @@ return function()
     --                 :BufferCloseBuffersRight
 
     -- Magic buffer-picking mode
-    vim.keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
-    vim.keymap.set('n', '<C-o>', '<Cmd>BufferPickDelete<CR>', opts)
+    vim.keymap.set('n', '<leader>p', '<Cmd>BufferPick<CR>', opts)
+    vim.keymap.set('n', '<leader>d', '<Cmd>BufferPickDelete<CR>', opts)
 
     -- Sort automatically by...
     vim.keymap.set('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
