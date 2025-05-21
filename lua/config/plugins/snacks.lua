@@ -3,7 +3,6 @@ local snacks = require('snacks')
 function M.setup()
     snacks.setup({
         animate = {
-            enabled = true,
             duration = 20,
             easing = "outQuad",
             fps = 60,
@@ -33,7 +32,7 @@ function M.setup()
             style = "fancy",
             level = 0,
             margin = {
-                bottom = 1
+                bottom = 2
             }
         },
         quickfile = { enabled = false },
@@ -41,6 +40,13 @@ function M.setup()
         scroll = { enabled = true },
         statuscolumn = { enabled = false },
         words = { enabled = false },
+        zen = {
+            toggles = {
+                dim = false,
+                git_signs = true
+            },
+        }
+
     })
 end
 

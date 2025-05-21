@@ -89,4 +89,10 @@ return function()
     vim.keymap.set('n', '<leader>gs', builtin.git_status, { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>gb', builtin.git_branches, { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, { noremap = true, silent = true })
+
+    -- Keymaps Zen
+    vim.keymap.set('n', '<leader>z', function()
+            Snacks.zen()
+        end,
+        { noremap = true, silent = true })
 end
