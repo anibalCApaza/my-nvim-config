@@ -32,6 +32,9 @@ function M.setup()
             top_down = false,
             style = "fancy",
             level = 0,
+            margin = {
+                bottom = 1
+            }
         },
         quickfile = { enabled = false },
         scope = { enabled = false },
