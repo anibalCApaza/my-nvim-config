@@ -1,5 +1,6 @@
 # Mi configuración de Neovim
-![image](https://github.com/user-attachments/assets/a3af448e-caf7-4866-9568-769b1e733d45)
+![image](https://github.com/user-attachments/assets/1c9201d7-e367-4ca5-befe-ade85e01ebf0)
+
 Neovim se ha convertido en una herramienta clave en mi flujo de trabajo como desarrollador. Desde que comencé a usarlo, me ha ayudado a mejorar mi productividad al minimizar el uso del ratón y aprovechar al máximo los atajos de teclado. Sin embargo, aún soy un aprendiz en este mundo, y este repositorio refleja la configuración básica que he ido ajustando según mis necesidades.
 
 La idea detrás de esta configuración es ofrecer un entorno de desarrollo eficiente y limpio, enfocado en los lenguajes que utilizo con más frecuencia, como Python, JavaScript y algunos otros, sin que la herramienta se convierta en una distracción.
