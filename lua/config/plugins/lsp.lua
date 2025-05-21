@@ -15,9 +15,9 @@ local on_attach = function(_, bufnr)
 end
 
 local on_attach_no_format = function(client, bufnr)
-  client.server_capabilities.documentFormattingProvider = false
-  client.server_capabilities.documentRangeFormattingProvider = false
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = bufnr })
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = bufnr })
 end
 
 function M.setup()
@@ -61,20 +61,24 @@ function M.setup()
         },
 
         require("lspconfig").pyright.setup({
+            on_attach = on_attach_no_format
         }),
         require("lspconfig").ts_ls.setup({
-
+            on_attach = on_attach_no_format
         }),
         require("lspconfig").intelephense.setup({
-
+            on_attach = on_attach_no_format
         }),
         require("lspconfig").html.setup({
-            capabilities = capabilities
+            capabilities = capabilities,
+            on_attach = on_attach_no_format
         }),
         require("lspconfig").cssls.setup({
-            capatilities = capabilities
+            capabilities = capabilities,
+            on_attach = on_attach_no_format
         }),
         require("lspconfig").astro.setup({
+            on_attach = on_attach_no_format
         })
     )
 end
