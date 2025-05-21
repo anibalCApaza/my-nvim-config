@@ -21,7 +21,7 @@ function M.setup()
             enabled = false
         },
         input = {
-            enabled = false
+            enabled = true
         },
         picker = {
             enabled = false

@@ -1,7 +1,5 @@
 local api = vim.api
 
-
-
 -- Notify when a buffer is written (saved)
 -- Shows the name of the file that was just saved
 api.nvim_create_autocmd("BufWritePost", {
