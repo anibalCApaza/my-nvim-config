@@ -162,3 +162,4 @@ end
 
 -- MAPEO DE TECLAS
 require("config.keymaps")()
+require("config.autocmds")
