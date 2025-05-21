@@ -6,4 +6,6 @@ return {
     {
         "mason-org/mason-lspconfig.nvim"
     },
+    main = 'config.plugins.mason',
+    config = true
 }
