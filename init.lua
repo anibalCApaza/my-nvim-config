@@ -93,7 +93,7 @@ if vim.fn.has('unix') == 1 then
             },
             alpha = true,
             barbar = true,
-            noice = true,
+            noice = false,
             notify = true,
         },
         transparent_background = true,
