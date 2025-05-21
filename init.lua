@@ -95,6 +95,9 @@ if vim.fn.has('unix') == 1 then
             barbar = true,
             noice = false,
             notify = true,
+            snacks = {
+                enabled = true
+            }
         },
         transparent_background = true,
         no_italic = false,
