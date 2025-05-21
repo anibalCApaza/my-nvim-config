@@ -95,4 +95,12 @@ return function()
             Snacks.zen()
         end,
         { noremap = true, silent = true })
+
+    -- Keymaps Format
+
+    vim.keymap.set('n', '<leader>f',
+        function()
+            require("conform").format({ async = true })
+        end
+    )
 end
