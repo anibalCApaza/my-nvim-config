@@ -1,18 +1,8 @@
 local M = {}
-
+local mason = require('mason')
 function M.setup()
-    require("mason-lspconfig").setup({
-        automatic_enable = false,
-        ensure_installed = {
-            'lua_ls',
-            'pyright',
-            'ts_ls',
-            'intelephense',
-            'html',
-            'cssls',
-            'astro'
-        }
-    })
+    mason.setup({})
+
 end
 
 return M
