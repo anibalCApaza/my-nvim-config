@@ -1,7 +1,7 @@
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         {
             "folke/lazydev.nvim",
             ft = "lua", -- only load on lua files
