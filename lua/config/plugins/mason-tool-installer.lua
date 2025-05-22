@@ -9,10 +9,10 @@ function M.setup()
             'intelephense',
             'html',
             'cssls',
-            'astro'
+            'astro',
+            'prettier'
         }
     })
-
 end
 
 return M
