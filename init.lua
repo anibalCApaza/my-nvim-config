@@ -86,11 +86,6 @@ require("nvim-tree").setup({
 if vim.fn.has('unix') == 1 then
     require("catppuccin").setup({
         integrations = {
-            indent_blankline = {
-                enabled = true,
-                scope_color = "yellow", -- catppuccin color (eg. `lavender`) Default: text
-                colored_indent_levels = true,
-            },
             alpha = true,
             barbar = true,
             noice = false,
