@@ -156,6 +156,9 @@ elseif vim.fn.has('win64') == 1 then
         },
     })
     vim.cmd.colorscheme("kanagawa")
+
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1F1F28" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#1F1F28" })
 else
     vim.cmd.colorscheme("default")
 end
