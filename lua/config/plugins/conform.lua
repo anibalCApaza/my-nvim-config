@@ -8,6 +8,7 @@ function M.setup()
             html = { 'prettier' },
             css = { 'prettier' },
             javascript = { 'prettier' },
+            typescript = { 'prettier' }
         }
     })
 end
