@@ -32,6 +32,8 @@ vim.cmd [[
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
+-- unable showMODE
+vim.opt.showmode = false
 
 -- FUNCTIONS
 local function my_on_attach(bufnr)
