@@ -8,7 +8,8 @@ function M.setup()
             html = { 'prettier' },
             css = { 'prettier' },
             javascript = { 'prettier' },
-            typescript = { 'prettier' }
+            typescript = { 'prettier' },
+            python = { 'black' }
         }
     })
 end

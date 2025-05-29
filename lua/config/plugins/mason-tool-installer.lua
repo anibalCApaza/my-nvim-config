@@ -13,7 +13,8 @@ function M.setup()
             'cssls',
             'astro',
             -- Formatters
-            'prettier'
+            'prettier',
+            'black'
             -- Linters
         }
     })

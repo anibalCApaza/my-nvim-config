@@ -4,8 +4,8 @@ function M.setup()
     snacks.setup({
         animate = {
             duration = 20,
-            easing = "outQuad",
-            fps = 60,
+            easing = "linear",
+            fps = 120,
         },
         bigfile = {
             enabled = false
@@ -17,7 +17,22 @@ function M.setup()
             enabled = false
         },
         indent = {
-            enabled = false
+            enabled = true,
+            indent = {
+                enabled = true,
+                char = '▏',
+            },
+            animate = {
+                easing = "inOutCubic",
+                duration = {
+                    step = 15,
+                    total = 500
+                }
+            },
+            scope = {
+                enabled = true,
+                char = '▎'
+            }
         },
         input = {
             enabled = true
